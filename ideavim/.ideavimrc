@@ -56,6 +56,8 @@ nmap ng <action>(Go.NewGoFile)
 " 显示文件结构
 let g:WhichKeyDesc_FileStructure = "<leader>fs FileStructure"
 nmap <leader>fs <action>(FileStructurePopup)
+let g:WhichKeyDesc_FindFile = "<leader>fs FindFile"
+nmap <leader>ff <action>(GotoFile)
 " Tab 关闭
 let g:WhichKeyDesc_CloseOtherTabs = "<leader>xo CloseOtherTabs"
 nmap <leader>xo <action>(CloseAllEditorsButActive)
@@ -64,27 +66,29 @@ nmap <leader>x[ <action>(CloseAllToTheLeft)
 let g:WhichKeyDesc_CloseAllTabsOnTheRight = "<leader>x] CloseAllTabsOnTheRight"
 nmap <leader>x] <action>(CloseAllToTheRight)
 " 页面滚动
-let g:WhichKeyDesc_EditorScrollUp = "<leader>k EditorScrollUp"
-nmap <leader>k <action>(EditorScrollUp)
-let g:WhichKeyDesc_EditorScrollDown = "<leader>j EditorScrollDown"
-nmap <leader>j <action>(EditorScrollDown)
+let g:WhichKeyDesc_EditorScrollUp = "<C-k> EditorScrollUp"
+nmap <C-k> <action>(EditorScrollUp)
+let g:WhichKeyDesc_EditorScrollDown = "<C-j> EditorScrollDown"
+nmap <C-j> <action>(EditorScrollDown)
 " 到定义或引用处
-let g:WhichKeyDesc_GotoDeclaration = "<leader>gd GotoDeclaration"
-nmap gd <action>(GotoDeclaration)
+let g:WhichKeyDesc_GotoDeclaration = "<leader>gg GotoDeclaration"
+nmap <leader>gg <action>(GotoDeclaration)
 " 到使用处
 let g:WhichKeyDesc_FindUsages = "<leader>gr FindUsages"
-nmap gr <action>(FindUsages)
+nmap <leader>gr <action>(FindUsages)
 " 到父类
-let g:WhichKeyDesc_GotoSuperMethod = "gp GotoSuperMethod"
-nmap gp <action>(GotoSuperMethod)
+let g:WhichKeyDesc_GotoSuperMethod = "<leader>gp GotoSuperMethod"
+nmap <leader>gp <action>(GotoSuperMethod)
 " 到实现处
-let g:WhichKeyDesc_GotoImplementation = "gi GotoImplementation"
-nmap gi <action>(GotoImplementation)
+let g:WhichKeyDesc_GotoImplementation = "<leader>gi GotoImplementation"
+nmap <leader>gi <action>(GotoImplementation)
 " 跳转 method
 let g:WhichKeyDesc_MethodUp = "<M-k> MethodUp"
 nmap <M-k> <Action>(MethodUp)
 let g:WhichKeyDesc_MethodDown = "<M-j> MethodDown"
 nmap <M-j> <Action>(MethodDown)
+let g:WhichKeyDesc_ExtractMethod = "<leader>em ExtractMethod"
+vmap <leader>em <Action>(ExtractMethod)
 " 跳转 tab
 let g:WhichKeyDesc_PreviousTab = "<M-h> PreviousTab"
 nmap <M-h> <action>(PreviousTab)
@@ -92,7 +96,7 @@ let g:WhichKeyDesc_NextTab = "<M-l> NextTab"
 nmap <M-l> <action>(NextTab)
 " 翻译
 let g:WhichKeyDesc_EditorTranslate = "<leader>t EditorTranslate"
-nmap <leader>t <action>($EditorTranslateAction)
+vmap <leader>t <action>($EditorTranslateAction)
 " Cursor back
 let g:WhichKeyDesc_Back = "<C-i> Back"
 nmap <C-i> <action>(Back)
@@ -102,6 +106,12 @@ nmap <C-o> <action>(Forward)
 " 打开最近项目
 let g:WhichKeyDesc_OpenRecentProject = "<leader>p OpenRecentProject"
 nmap <leader>p <action>($LRU)
+let g:WhichKeyDesc_Replace = "<leader>rr Replace"
+nmap <leader>rr <action>(Replace)
+let g:WhichKeyDesc_ReplaceAll = "<leader>ra ReplaceAll"
+nmap <leader>ra <action>(ReplaceInPath)
+let g:WhichKeyDesc_NewLine = "<C-o> NewLine"
+nnoremap <C-o> :normal o<CR>
 
 sethandler <C-j> a:vim i:ide
 sethandler <C-k> a:vim i:ide
