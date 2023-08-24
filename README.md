@@ -6,9 +6,7 @@ Personal Vim Configuration Record
 
 ## Usage
 
-- ideavim
-
-[.ideavimrc](ideavim/.ideavimrc)
+- [.ideavimrc](ideavim/.ideavimrc)
 
 ## License
 
