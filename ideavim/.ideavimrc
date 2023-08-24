@@ -28,6 +28,7 @@ set relativenumber
 map Q gq
 
 " --- Plugin Configuration ---
+
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
