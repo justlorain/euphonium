@@ -57,9 +57,11 @@ nmap ng <action>(Go.NewGoFile)
 " 显示文件结构
 let g:WhichKeyDesc_FileStructure = "<leader>fs FileStructure"
 nmap <leader>fs <action>(FileStructurePopup)
-let g:WhichKeyDesc_FindFile = "<leader>fs FindFile"
+let g:WhichKeyDesc_FindFile = "<leader>ff FindFile"
 nmap <leader>ff <action>(GotoFile)
 " Tab 关闭
+let g:WhichKeyDesc_CloseCurrentTab = "<leader>xc CloseCurrentTab"
+nmap <leader>xc <action>(CloseContent)
 let g:WhichKeyDesc_CloseOtherTabs = "<leader>xo CloseOtherTabs"
 nmap <leader>xo <action>(CloseAllEditorsButActive)
 let g:WhichKeyDesc_CloseAllTabsOnTheLeft = "<leader>x[ CloseAllTabsOnTheLeft"
@@ -72,8 +74,8 @@ nmap <C-k> <action>(EditorScrollUp)
 let g:WhichKeyDesc_EditorScrollDown = "<C-j> EditorScrollDown"
 nmap <C-j> <action>(EditorScrollDown)
 " 到定义或引用处
-let g:WhichKeyDesc_GotoDeclaration = "<leader>gg GotoDeclaration"
-nmap <leader>gg <action>(GotoDeclaration)
+let g:WhichKeyDesc_GotoDeclaration = "gd GotoDeclaration"
+nmap gd <action>(GotoDeclaration)
 " 到使用处
 let g:WhichKeyDesc_FindUsages = "<leader>gr FindUsages"
 nmap <leader>gr <action>(FindUsages)
@@ -107,12 +109,20 @@ nmap <C-o> <action>(Forward)
 " 打开最近项目
 let g:WhichKeyDesc_OpenRecentProject = "<leader>p OpenRecentProject"
 nmap <leader>p <action>($LRU)
-let g:WhichKeyDesc_Replace = "<leader>rr Replace"
-nmap <leader>rr <action>(Replace)
-let g:WhichKeyDesc_ReplaceAll = "<leader>ra ReplaceAll"
-nmap <leader>ra <action>(ReplaceInPath)
-let g:WhichKeyDesc_NewLine = "<C-o> NewLine"
-nnoremap <C-o> :normal o<CR>
+" 替换
+let g:WhichKeyDesc_ReplaceInFile = "<leader>rif ReplaceInFile"
+nmap <leader>rif <action>(Replace)
+let g:WhichKeyDesc_ReplaceInProject = "<leader>rip ReplaceInProject"
+nmap <leader>rip <action>(ReplaceInPath)
+" 查找
+let g:WhichKeyDesc_FindInFile = "<leader>fif FindInFile"
+nmap <leader>fif <action>(Find)
+let g:WhichKeyDesc_FindInProject = "<leader>fip FindInProject"
+nmap <leader>fip <action>(FindInPath)
+" 新建行
+let g:WhichKeyDesc_NewLine = "<M-o> NewLine"
+nnoremap <M-o> :normal o<CR>
+
 
 sethandler <C-j> a:vim i:ide
 sethandler <C-k> a:vim i:ide
