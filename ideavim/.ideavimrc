@@ -6,6 +6,13 @@ nmap <leader>vim <Action>(VimPluginToggle)
 " leader key
 let mapleader = " "
 
+" 在行首/行尾时按 h/l 可以移动到上一行/下一行
+set whichwrap=b,s,<,>,h,l,[,]
+
+"" visual shifting (builtin-repeat)
+vnoremap < <gv
+vnoremap > >gv
+
 " 上下滚动边距行差
 set scrolloff=5
 
