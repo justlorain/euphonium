@@ -6,7 +6,14 @@ Personal Vim Configuration Record
 
 ## Usage
 
-- [.ideavimrc](ideavim/.ideavimrc)
+- [ideavim](ideavim/.ideavimrc)
+- [neovim](neovim)
+
+## Credits
+
+Sincere appreciation to the following repositories that made the development of EUPHONIUM possible.
+
+- [NvChad](https://github.com/NvChad/NvChad)
 
 ## License
 
