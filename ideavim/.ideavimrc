@@ -59,16 +59,16 @@ set keep-english-in-normal
 " --- Coding Configuration ---
 
 " 新建 Go 文件(在当前文件所在系统位置)
-let g:WhichKeyDesc_NewGoFile = "ng NewGoFile"
-nmap ng <action>(Go.NewGoFile)
+" let g:WhichKeyDesc_NewGoFile = "ng NewGoFile"
+" nmap ng <action>(Go.NewGoFile)
 " 显示文件结构
 let g:WhichKeyDesc_FileStructure = "<leader>fs FileStructure"
 nmap <leader>fs <action>(FileStructurePopup)
 let g:WhichKeyDesc_FindFile = "<leader>ff FindFile"
 nmap <leader>ff <action>(GotoFile)
 " Tab 关闭
-let g:WhichKeyDesc_CloseCurrentTab = "<leader>xc CloseCurrentTab"
-nmap <leader>xc <action>(CloseContent)
+let g:WhichKeyDesc_CloseCurrentTab = "<leader>xx CloseCurrentTab"
+nmap <leader>xx <action>(CloseContent)
 let g:WhichKeyDesc_CloseOtherTabs = "<leader>xo CloseOtherTabs"
 nmap <leader>xo <action>(CloseAllEditorsButActive)
 let g:WhichKeyDesc_CloseAllTabsOnTheLeft = "<leader>x[ CloseAllTabsOnTheLeft"
@@ -87,8 +87,8 @@ nmap gd <action>(GotoDeclaration)
 let g:WhichKeyDesc_FindUsages = "<leader>gr FindUsages"
 nmap <leader>gr <action>(FindUsages)
 " 到父类
-let g:WhichKeyDesc_GotoSuperMethod = "<leader>gp GotoSuperMethod"
-nmap <leader>gp <action>(GotoSuperMethod)
+let g:WhichKeyDesc_GotoSuperMethod = "<leader>gs GotoSuperMethod"
+nmap <leader>gs <action>(GotoSuperMethod)
 " 到实现处
 let g:WhichKeyDesc_GotoImplementation = "<leader>gi GotoImplementation"
 nmap <leader>gi <action>(GotoImplementation)
@@ -119,13 +119,17 @@ nmap <leader>p <action>($LRU)
 " 替换
 let g:WhichKeyDesc_ReplaceInFile = "<leader>rif ReplaceInFile"
 nmap <leader>rif <action>(Replace)
+vmap <leader>rif <action>(Replace)
 let g:WhichKeyDesc_ReplaceInProject = "<leader>rip ReplaceInProject"
 nmap <leader>rip <action>(ReplaceInPath)
+vmap <leader>rip <action>(ReplaceInPath)
 " 查找
 let g:WhichKeyDesc_FindInFile = "<leader>fif FindInFile"
 nmap <leader>fif <action>(Find)
+vmap <leader>fif <action>(Find)
 let g:WhichKeyDesc_FindInProject = "<leader>fip FindInProject"
 nmap <leader>fip <action>(FindInPath)
+vmap <leader>fip <action>(FindInPath)
 " 新建行
 let g:WhichKeyDesc_NewLine = "<M-o> NewLine"
 nnoremap <M-o> :normal o<CR>
