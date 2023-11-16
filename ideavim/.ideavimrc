@@ -139,6 +139,9 @@ nmap <leader>bb <action>(ToggleLineBreakpoint)
 " 查看表达式类型
 let g:WhichKeyDesc_ExpressionTypeInfo = "<leader>et ExpressionTypeInfo"
 nmap <leader>et <action>(ExpressionTypeInfo)
+" 最新文件
+let g:WhichKeyDesc_RecentFiles = "<leader>ee RecentFiles"
+nmap <leader>ee <action>(RecentFiles)
 
 sethandler <C-j> a:vim i:ide
 sethandler <C-k> a:vim i:ide
