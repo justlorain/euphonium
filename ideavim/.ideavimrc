@@ -54,7 +54,7 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 set which-key
 set notimeout
 " ideavim_extension 自动切换输入法
-set keep-english-in-normal
+" set keep-english-in-normal
 
 " --- Coding Configuration ---
 
