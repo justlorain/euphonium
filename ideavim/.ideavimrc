@@ -106,7 +106,7 @@ let g:WhichKeyDesc_NextTab = "<M-l> NextTab"
 nmap <M-l> <action>(NextTab)
 " 翻译
 let g:WhichKeyDesc_EditorTranslate = "<leader>t EditorTranslate"
-vmap <leader>t <action>($EditorTranslateAction)
+vmap <leader>t <action>(Translation.EditorTranslateAction)
 " Cursor back
 let g:WhichKeyDesc_Back = "<C-i> Back"
 nmap <C-i> <action>(Back)
