@@ -2,18 +2,11 @@
 
 > Sound! Euphonium
 
-Personal Vim Configuration Record
+My VIM configurations.
 
 ## Usage
 
 - [ideavim](ideavim/.ideavimrc)
-- [neovim](neovim)
-
-## Credits
-
-Sincere appreciation to the following repositories that made the development of EUPHONIUM possible.
-
-- [NvChad](https://github.com/NvChad/NvChad)
 
 ## License
 
